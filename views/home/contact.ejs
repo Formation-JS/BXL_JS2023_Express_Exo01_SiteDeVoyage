@@ -1,5 +1,44 @@
+<% var error %> 
+
 <%- include('../partials/_header.ejs')  %>
 
 <h1>Page de contact</h1>
+<h2>Formulaire</h2>
+<form method="post">
+    <div>
+        <label for="input-email">Email</label>
+        <input id="input-email" type="email" required name="email">
+        <% if(error && error.email) { %>
+            <span class="error"><%= error.email %></span>
+        <% } %>
+    </div>
+    <div>
+        <label for="input-pseudo">Pseudo</label>
+        <input id="input-pseudo" type="text" name="pseudo">
+    </div>
+    <div>
+        <label for="">Categorie</label>
+        <select required name="category">
+            <option disabled="disabled" selected="selected" value="">-- Veuillez selectionner une option --</option>
+            <option value="1">Info</option>
+            <option value="2">Devis</option>
+            <option value="3">Reclamation</option>
+            <option value="4">Autres</option>
+        </select>
+        <% if(error && error.category) { %>
+            <span class="error"><%= error.category %></span>
+        <% } %>
+    </div>
+    <div>
+        <label for="input-msg">Message</label>
+        <textarea id="input-msg" required name="message"></textarea>
+        <% if(error && error.message) { %>
+            <span class="error"><%= error.message %></span>
+        <% } %>
+    </div>
+    <div>
+        <button type="submit">Envoyer 💙</button>
+    </div>
+</form>
 
 <%- include('../partials/_footer.ejs')  %>

@@ -34,3 +34,7 @@ h1 {
     color: navy;
     text-shadow: hotpink 1px 2px 2px;
 }
+
+.error {
+    color: crimson;
+}
