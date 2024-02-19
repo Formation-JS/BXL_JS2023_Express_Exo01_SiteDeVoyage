@@ -22,11 +22,31 @@ const destController = {
     
     detail: (req, res) => {
         // Le detail d'une destination
-        const id = req.params.id;
-        console.log(`Detail : ${id} ${typeof id}`);
+        // - Récuperation de l'id depuis la route
+        const id = parseInt(req.params.id);
 
-        res.render('dest/detail');
-    }
+        // - Obtenir l'element ciblé
+        const dest = mockup.find((elem) => elem.id === id);
+
+        if(!dest) {
+            res.redirect('/dest/not-found');
+            return;
+        }
+
+        const viewData = {
+            name: dest.name,
+            location: dest.location,
+            imgUrl: `/public/images/destinations/${dest.image}`,
+            desc: dest.description,
+            price: dest.price,
+            duration: dest.duration
+        };
+        res.render('dest/detail', viewData);
+    },
+
+    errorNotFound: (req, res) => {
+        res.render('dest/not-found');
+    } 
 };
 
 module.exports = destController;

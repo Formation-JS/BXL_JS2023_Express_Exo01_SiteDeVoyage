@@ -1,5 +1,11 @@
 <%- include('../partials/_header.ejs')  %>
 
-<h1>Détail d'un destination</h1>
+<h1>Visite du « <%= name %> »</h1>
+<h2><%= location %></h2>
+
+<img src="<%= imgUrl %>" alt="Image de « <%= name %> »">
+<p><%= desc %></p>
+<p>Prix : <%= price %> / Durée : <%= duration %></p>
+
 
 <%- include('../partials/_footer.ejs')  %>
