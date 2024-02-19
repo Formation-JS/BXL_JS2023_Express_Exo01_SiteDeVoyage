@@ -14,6 +14,9 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 // Middlewares
+// - Gestion des fichiers "public"
+app.use('/public', express.static('./public'));
+// - Gestion des formulaires
 app.use(express.urlencoded({ extended: true }));
 
 // Import des routers
