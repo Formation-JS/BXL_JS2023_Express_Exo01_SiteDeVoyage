@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+    background-color: rgba(255, 250, 250, 0.9);
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0.5em 0.5ch;
+    gap: 2ch;
+    background-color: navy;
+}
+nav ul li a {
+    color: snow;
+    text-decoration: none;
+}
+
+footer {
+    background-color: navy;
+    color: snow;
+}
+
+h1 {
+    color: navy;
+    text-shadow: hotpink 1px 2px 2px;
+}
