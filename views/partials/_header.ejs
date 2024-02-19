@@ -1,0 +1,22 @@
+<% 
+// Variable optionel du template (Déclaré en var)
+// - title : Pour customiser le titre du site 
+var title;
+// - section... : Pour pouvoir injecté des balise "css" et "script"
+var section_css;
+var section_scripts;
+%>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title ?? 'Exo 01' %></title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <%- section_css %>
+    <%- section_scripts %>
+</head>
+<body>
+    <%- include('./_nav.ejs') %>
+    
