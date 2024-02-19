@@ -1,5 +1,24 @@
-<%- include('../partials/_header.ejs')  %>
+<% const section_css=`
+<link rel="stylesheet" href="/public/css/style-dest.css">
+` %>
+
+<%- include('../partials/_header.ejs', { section_css }) %>
+
 
 <h1>Liste des destinations</h1>
+<section id="list-dest">
 
-<%- include('../partials/_footer.ejs')  %>
+<% for(const dest of destinations) { %>
+<article>
+    <a href="<%= dest.detailUrl %>">
+        <img src="<%= dest.imgUrl %>" alt="Image de « <%= dest.name %> »">
+        <h3><%= dest.name %></h3>
+        <p><%= dest.desc %></p>
+    </a>
+</article>
+<% } %>
+
+</section>
+
+
+<%- include('../partials/_footer.ejs') %>

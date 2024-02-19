@@ -1,0 +1,16 @@
+#list-dest {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2ch;
+}
+
+#list-dest > article a {
+    text-decoration: none;
+    color: crimson;
+}
+
+#list-dest > article  img {
+    max-width: 100%;
+    height: 10rem;
+    object-fit: cover;
+}
