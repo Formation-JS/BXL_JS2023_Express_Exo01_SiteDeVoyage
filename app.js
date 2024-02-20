@@ -26,6 +26,19 @@ app.use('/dest', destRouter);
 // - L'erreur 404 si aucune route validé
 app.all('**', (req, res) => res.render('errors/not-found'));
 
+// Le middleware de gestion d'erreur
+app.use((error, req, res, next) => {
+    // TODO : Ajouter l'erreur dans un logger (fichier, db, ...)
+
+    // Page d'erreur pour l'utilisateur final
+    if(NODE_ENV !== 'dev') {
+        res.render('errors/server');
+        return;
+    }
+
+    // Relance l'erreur (possibilité, à la place, de créer une page erreur custom)
+    throw error;
+});
 
 // Démarrage du server
 const { PORT, NODE_ENV } = process.env;
