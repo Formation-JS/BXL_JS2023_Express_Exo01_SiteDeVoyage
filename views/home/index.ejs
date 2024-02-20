@@ -2,11 +2,17 @@
 const section_css = `
 <link rel="stylesheet" href="/public/css/style-home.css">
 `;
+const section_scripts = `
+<script src="/public/js/script.js" defer></script>
+`;
 %>
 
-<%- include('../partials/_header.ejs', { section_css })  %>
+
+<%- include('../partials/_header.ejs', { section_css, section_scripts })  %>
 
 <h1>Page d'accueil</h1>
+<h2 id="display-time"></h2>
+
 <p>Bienvenue sur Japon Voyage, le site qui vous fait découvrir les 10 meilleures destinations du pays du soleil levant ! Que vous soyez à la recherche de culture, de nature, de gastronomie ou de divertissement, vous trouverez votre bonheur sur notre site. Nous vous proposons des informations détaillées, des photos, des vidéos, des avis et des conseils pour chaque destination, ainsi que des offres de séjours et de vols adaptés à votre budget et à vos envies. N'attendez plus, explorez le Japon avec nous !</p>
 
 <%- include('../partials/_footer.ejs')  %>
