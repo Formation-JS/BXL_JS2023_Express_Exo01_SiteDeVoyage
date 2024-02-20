@@ -20,8 +20,12 @@ app.use('/public', express.static('./public'));
 app.use(express.urlencoded({ extended: true }));
 
 // Import des routers
+// - Les différentes routes possibles
 app.use(homeRouter);
 app.use('/dest', destRouter);
+// - L'erreur 404 si aucune route validé
+app.all('**', (req, res) => res.render('errors/not-found'));
+
 
 // Démarrage du server
 const { PORT, NODE_ENV } = process.env;
