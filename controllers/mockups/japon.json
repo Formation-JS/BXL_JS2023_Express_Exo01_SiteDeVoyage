@@ -8,7 +8,7 @@
         "image": "Kinkaku-ji.JPG",
         "thumbnail": "Kinkaku-ji.webp",
         "duration": "2 heures",
-        "price": "3.20 euros"
+        "price": 3.2
     },
     {
         "id": 2,
@@ -19,7 +19,7 @@
         "image": "japon-le-mont-fuji-montagne-sacree",
         "thumbnail": "fuji.jpg",
         "duration": "3 jours pour l'escalade",
-        "price":  "Gratuit"
+        "price": 0
     },
     {
         "id": 3,
@@ -30,7 +30,7 @@
         "image": "Temple-Senjo-Ji.webp",
         "thumbnail": "Temple-de-Senso-ji.jpg",
         "duration": "1 heure",
-        "price": "Gratuit"
+        "price": 0
     },
     {
         "id": 4,
@@ -41,18 +41,18 @@
         "image": "himeji-castle.jpg",
         "thumbnail": "himeji-castle.jpg",
         "duration": "3 heures",
-        "price": "8 euros"
+        "price": 8
     },
     {
         "id": 5,
         "name": "Parc de Nara",
         "location": "Nara",
-        "description": "Le parc de Nara est célèbre pour ses nombreux cerfs sika en liberté. Il abrite également plusieurs temples importants.",
+        "description": "Le parc de Nara est célèbre pour ses nombreux cerfs sika en liberté. Il est possible de nourrir les cerfs. Il abrite également plusieurs temples importants.",
         "shortDescription": "Parc avec des cerfs en liberté à Nara.",
         "image": "parc-nara.jpg",
         "thumbnail": "parc-nara.jpg",
         "duration": "Demi-journée",
-        "price": "Gratuit, mais nourrir les cerfs a un coût"
+        "price": 0
     },
     {
         "id": 7,
@@ -63,7 +63,7 @@
         "image": "Shibuya-Crossing.jpg",
         "thumbnail": "Shibuya-Crossing.jpg",
         "duration": "30 minutes",
-        "price": "Gratuit"
+        "price": 0
     },
     {
         "id": 9,
@@ -74,7 +74,7 @@
         "image": "kenrokuen.jpg",
         "thumbnail": "Kenrokuen-garden.jpg",
         "duration": "1-2 heures",
-        "price": "2.48 euros"
+        "price": 2.48
     },
     {
         "id": 10,
@@ -85,7 +85,7 @@
         "image": "Adachi.webp",
         "thumbnail": "Adachi.jpg",
         "duration": "2-3 heures",
-        "price": "18.40 euros"
+        "price": 18.40
     },
     {
         "id": 11,
@@ -96,7 +96,7 @@
         "image": "itsukushima-miyajima.jpg",
         "thumbnail": "Itsukushima_Gate.jpg",
         "duration": "2 heures",
-        "price": "2.40 euros"
+        "price": 2.40
     },
     {
         "id": 12,
@@ -107,6 +107,6 @@
         "image": "Ogi_Shirakawa-gō,_Gifu,_Japan.jpg",
         "thumbnail": "Ogi_Shirakawa-gō.jpg",
         "duration": "Demi-journée",
-        "price": "Gratuit, mais certaines maisons ont des frais d'entrée"
+        "price": null
     }
 ]

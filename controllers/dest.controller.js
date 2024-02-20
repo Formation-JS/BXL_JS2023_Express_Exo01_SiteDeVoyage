@@ -33,12 +33,16 @@ const destController = {
             return;
         }
 
+        const price = dest.price === null ? 'Pas d\'information sur le prix'
+            : dest.price === 0 ? 'Gratuit'
+            : dest.price.toLocaleString('fr-be', { style: 'currency', currency: 'EUR'});
+
         const viewData = {
             name: dest.name,
             location: dest.location,
             imgUrl: `/public/images/destinations/${dest.image}`,
             desc: dest.description,
-            price: dest.price,
+            price,
             duration: dest.duration
         };
         res.render('dest/detail', viewData);
